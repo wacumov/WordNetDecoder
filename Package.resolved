@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "XMLCoder",
-        "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
+        "package": "xml2json",
+        "repositoryURL": "https://github.com/wacumov/xml2json",
         "state": {
           "branch": null,
-          "revision": "ac411bd6ab342780be0dfe6f679410f791d751d9",
-          "version": "0.11.1"
+          "revision": "b2a8a6f9114a61c2a1c939c3ad4a6466c6f644b4",
+          "version": "0.0.1"
         }
       }
     ]

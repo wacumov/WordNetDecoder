@@ -7,10 +7,11 @@
 public struct Lemma: Codable {
     public let writtenForm: String
     public let partOfSpeech: PartOfSpeech
-    public let tags: [Tag]
+    public let tags: ArrayOrObject<Tag>?
     
     enum CodingKeys: String, CodingKey {
-        case writtenForm, partOfSpeech
+        case writtenForm = "@writtenForm"
+        case partOfSpeech = "@partOfSpeech"
         case tags = "Tag"
     }
 }

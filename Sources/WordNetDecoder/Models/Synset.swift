@@ -11,13 +11,14 @@ public struct Synset: Codable {
     public let id: ID
     public let ili: String
     
-    public let iliDefinition: ILIDefinition?
-    public let definitions: [Definition]
-    public let synsetRelations: [SynsetRelation]
-    public let examples: [Example]
+    public let iliDefinition: StringOrObject<ILIDefinition>?
+    public let definitions: ArrayOrObject<StringOrObject<Definition>>?
+    public let synsetRelations: ArrayOrObject<SynsetRelation>?
+    public let examples: ArrayOrObject<Example>?
     
     enum CodingKeys: String, CodingKey {
-        case id, ili
+        case id = "@id"
+        case ili = "@ili"
         case iliDefinition = "ILIDefinition"
         case definitions = "Definition"
         case synsetRelations = "SynsetRelation"

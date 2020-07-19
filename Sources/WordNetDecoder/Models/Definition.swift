@@ -8,6 +8,6 @@ public struct Definition: Codable {
     public let value: String
     
     enum CodingKeys: String, CodingKey {
-        case value = ""
+        case value = "#text"
     }
 }

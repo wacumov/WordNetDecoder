@@ -6,10 +6,10 @@
 
 public struct Form: Codable {
     public let writtenForm: String
-    public let tags: [Tag]
+    public let tags: ArrayOrObject<Tag>?
     
     enum CodingKeys: String, CodingKey {
-        case writtenForm
+        case writtenForm = "@writtenForm"
         case tags = "Tag"
     }
 }

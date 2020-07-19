@@ -10,7 +10,7 @@ public struct Tag: Codable {
     public let value: String
     
     enum CodingKeys: String, CodingKey {
-        case category
-        case value = ""
+        case category = "@category"
+        case value = "#text"
     }
 }

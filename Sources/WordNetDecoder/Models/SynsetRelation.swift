@@ -8,6 +8,11 @@ public struct SynsetRelation: Codable {
     public let target: Synset.ID
     public let relType: RelationType
     
+    enum CodingKeys: String, CodingKey {
+        case target = "@target"
+        case relType = "@relType"
+    }
+    
     public enum RelationType: String, Codable {
         case agent
         case antonym
@@ -15,7 +20,7 @@ public struct SynsetRelation: Codable {
         case attribute
         case beInState = "be_in_state"
         case causes
-        case classifiedBy
+        case classifiedBy = "classified_by"
         case classifies
         case coAgentInstrument = "co_agent_instrument"
         case coAgentPatient = "co_agent_patient"

@@ -4,10 +4,4 @@
  *  MIT license, see LICENSE file for details
  */
 
-public struct Count: Codable {
-    public let value: String
-    
-    enum CodingKeys: String, CodingKey {
-        case value = ""
-    }
-}
+public typealias Count = String

@@ -43,7 +43,7 @@ let exampleXMLString =
     </Lexicon>
     <Lexicon id="example_sv"
              label="Example wordnet (Swedish)"
-             language="sv" 
+             language="sv"
              email="john@mccr.ae"
              license="https://creativecommons.org/publicdomain/zero/1.0/"
              version="1.0"
@@ -58,6 +58,9 @@ let exampleXMLString =
             <Sense id="example-sv-2-n-1" synset="example-en-1-n">
                 <Example dc:source="Europarl Corpus">Jag vill berätta för er att min farfar var svensk beredskapssoldat vid norska gränsen under andra världskriget, ett krig som Sverige stod utanför</Example>
             </Sense>
+        </LexicalEntry>
+        <LexicalEntry id="w5">
+            <Lemma writtenForm="fäder" partOfSpeech="n"/>
         </LexicalEntry>
     </Lexicon>
 </LexicalResource>

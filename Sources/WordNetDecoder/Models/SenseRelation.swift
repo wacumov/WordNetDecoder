@@ -8,6 +8,11 @@ public struct SenseRelation: Codable {
     public let target: Sense.ID
     public let relType: RelationType
     
+    enum CodingKeys: String, CodingKey {
+        case target = "@target"
+        case relType = "@relType"
+    }
+    
     public enum RelationType: String, Codable {
         case antonym
         case also

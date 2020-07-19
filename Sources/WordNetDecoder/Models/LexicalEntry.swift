@@ -7,12 +7,12 @@
 public struct LexicalEntry: Codable {
     public let id: String
     public let lemma: Lemma
-    public let forms: [Form]
-    public let senses: [Sense]
-    public let syntacticBehaviours: [SyntacticBehaviour]
+    public let forms: ArrayOrObject<Form>?
+    public let senses: ArrayOrObject<Sense>?
+    public let syntacticBehaviours: ArrayOrObject<SyntacticBehaviour>?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case id = "@id"
         case lemma = "Lemma"
         case forms = "Form"
         case senses = "Sense"

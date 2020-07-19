@@ -4,10 +4,11 @@
  *  MIT license, see LICENSE file for details
  */
 
-public struct SyntacticBehaviour: Codable {
-    public let subcategorizationFrame: String
+public struct WordNet: Codable {
+    
+    public let lexicalResource: LexicalResource
     
     enum CodingKeys: String, CodingKey {
-        case subcategorizationFrame = "@subcategorizationFrame"
+        case lexicalResource = "LexicalResource"
     }
 }

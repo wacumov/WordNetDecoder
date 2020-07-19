@@ -10,12 +10,13 @@ public struct Sense: Codable {
     
     public let id: ID
     public let synset: Synset.ID
-    public let senseRelations: [SenseRelation]
-    public let examples: [Example]
-    public let counts: [Count]
+    public let senseRelations: ArrayOrObject<SenseRelation>?
+    public let examples: ArrayOrObject<Example>?
+    public let counts: ArrayOrObject<Count>?
     
     enum CodingKeys: String, CodingKey {
-        case id, synset
+        case id = "@id"
+        case synset = "@synset"
         case senseRelations = "SenseRelation"
         case examples = "Example"
         case counts = "Count"

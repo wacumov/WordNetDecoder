@@ -5,7 +5,7 @@
  */
 
 public struct LexicalResource: Codable {
-    public let lexicons: [Lexicon]
+    public let lexicons: ArrayOrObject<Lexicon>
     
     enum CodingKeys: String, CodingKey {
         case lexicons = "Lexicon"

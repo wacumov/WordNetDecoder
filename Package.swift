@@ -11,12 +11,12 @@ let package = Package(
             targets: ["WordNetDecoder"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/MaxDesiatov/XMLCoder.git", from: "0.11.1")
+        .package(url: "https://github.com/wacumov/xml2json", from: "0.0.1")
     ],
     targets: [
         .target(
             name: "WordNetDecoder",
-            dependencies: ["XMLCoder"]),
+            dependencies: ["xml2json"]),
         .testTarget(
             name: "WordNetDecoderTests",
             dependencies: ["WordNetDecoder"]),

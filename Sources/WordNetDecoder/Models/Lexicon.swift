@@ -13,10 +13,15 @@ public struct Lexicon: Codable {
     public let version: String
     
     public let lexicalEntries: [LexicalEntry]
-    public let synsets: [Synset]
+    public let synsets: [Synset]?
     
     enum CodingKeys: String, CodingKey {
-        case id, label, language, email, license, version
+        case id = "@id"
+        case label = "@label"
+        case language = "@language"
+        case email = "@email"
+        case license = "@license"
+        case version = "@version"
         case lexicalEntries = "LexicalEntry"
         case synsets = "Synset"
     }
