@@ -4,10 +4,4 @@
  *  MIT license, see LICENSE file for details
  */
 
-public struct ILIDefinition: Codable {
-    public let value: String
-    
-    enum CodingKeys: String, CodingKey {
-        case value = "#text"
-    }
-}
+public typealias ILIDefinition = StringValue

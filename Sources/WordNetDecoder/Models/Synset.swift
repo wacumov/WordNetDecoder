@@ -11,8 +11,8 @@ public struct Synset: Codable {
     public let id: ID
     public let ili: String
     
-    public let iliDefinition: StringOrObject<ILIDefinition>?
-    public let definitions: OneOrMany<StringOrObject<Definition>>?
+    public let iliDefinition: ILIDefinition?
+    public let definitions: OneOrMany<Definition>?
     public let synsetRelations: OneOrMany<SynsetRelation>?
     public let examples: OneOrMany<Example>?
     
