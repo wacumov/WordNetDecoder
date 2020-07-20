@@ -5,7 +5,7 @@
 [![Swift Package](https://img.shields.io/static/v1?label=Swift&message=Package&logo=Swift&color=fa7343&style=flat)](https://github.com/Apple/swift-package-manager)
 ![Mac & Linux](https://img.shields.io/badge/platforms-mac+linux-brightgreen.svg?style=flat)
 
-A Swift decoder for WordNets. Basically, it's just a set of models that matches [the schema](https://globalwordnet.github.io/schemas/). All the hard work of XML decoding is doing by [this package](https://github.com/MaxDesiatov/XMLCoder).
+A Swift decoder for WordNets. Basically, it's just a set of models that matches [the schema](https://globalwordnet.github.io/schemas/). All the hard work of XML parsing is doing by [this package](https://github.com/wacumov/xml2json).
 
 ## Installation
 
@@ -17,7 +17,7 @@ Once you have your Swift package set up, adding `WordNetDecoder` as a dependency
 easy as adding it to the `dependencies` value of your `Package.swift`.
 ```swift
 dependencies: [
-    .package(url: "https://github.com/wacumov/WordNetDecoder", from: "0.0.1")
+    .package(url: "https://github.com/wacumov/WordNetDecoder", from: "0.0.2")
 ]
 ```
 
