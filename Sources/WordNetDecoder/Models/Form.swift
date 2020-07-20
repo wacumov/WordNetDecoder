@@ -6,7 +6,7 @@
 
 public struct Form: Codable {
     public let writtenForm: String
-    public let tags: ArrayOrObject<Tag>?
+    public let tags: OneOrMany<Tag>?
     
     enum CodingKeys: String, CodingKey {
         case writtenForm = "@writtenForm"

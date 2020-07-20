@@ -12,9 +12,9 @@ public struct Synset: Codable {
     public let ili: String
     
     public let iliDefinition: StringOrObject<ILIDefinition>?
-    public let definitions: ArrayOrObject<StringOrObject<Definition>>?
-    public let synsetRelations: ArrayOrObject<SynsetRelation>?
-    public let examples: ArrayOrObject<Example>?
+    public let definitions: OneOrMany<StringOrObject<Definition>>?
+    public let synsetRelations: OneOrMany<SynsetRelation>?
+    public let examples: OneOrMany<Example>?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"

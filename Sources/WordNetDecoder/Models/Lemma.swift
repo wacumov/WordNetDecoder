@@ -7,7 +7,7 @@
 public struct Lemma: Codable {
     public let writtenForm: String
     public let partOfSpeech: PartOfSpeech
-    public let tags: ArrayOrObject<Tag>?
+    public let tags: OneOrMany<Tag>?
     
     enum CodingKeys: String, CodingKey {
         case writtenForm = "@writtenForm"

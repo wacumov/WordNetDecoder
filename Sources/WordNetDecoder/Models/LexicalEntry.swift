@@ -7,9 +7,9 @@
 public struct LexicalEntry: Codable {
     public let id: String
     public let lemma: Lemma
-    public let forms: ArrayOrObject<Form>?
-    public let senses: ArrayOrObject<Sense>?
-    public let syntacticBehaviours: ArrayOrObject<SyntacticBehaviour>?
+    public let forms: OneOrMany<Form>?
+    public let senses: OneOrMany<Sense>?
+    public let syntacticBehaviours: OneOrMany<SyntacticBehaviour>?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"

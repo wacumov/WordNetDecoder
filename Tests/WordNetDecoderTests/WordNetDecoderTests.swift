@@ -17,8 +17,7 @@ final class WordNetDecoderTests: XCTestCase {
         let wordnet = try WordNetXMLDecoder().decode(data)
 
         // Then
-        guard case .array(let lexicons) = wordnet.lexicalResource.lexicons else { return XCTFail() }
-        XCTAssertEqual(lexicons.count, 2)
+        XCTAssertEqual(wordnet.lexicalResource.lexicons.array.count, 2)
     }
 
     static var allTests = [

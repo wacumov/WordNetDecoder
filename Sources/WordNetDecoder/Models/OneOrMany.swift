@@ -4,28 +4,26 @@
  *  MIT license, see LICENSE file for details
  */
 
-public enum ArrayOrObject<T: Codable>: Codable {
+public struct OneOrMany<T: Codable>: Codable {
 
-    case array([T])
-    case object(T)
+    public let array: [T]
+
+    enum CodingKeys: String, CodingKey {
+        case array = "array"
+    }
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let array = try? container.decode([T].self) {
-            self = .array(array)
+            self.array = array
             return
         }
         let object = try container.decode(T.self)
-        self = .object(object)
+        self.array = [object]
     }
     
     public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .array(let array):
-            try container.encode(array)
-        case .object(let object):
-            try container.encode(object)
-        }
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(array, forKey: .array)
     }
 }

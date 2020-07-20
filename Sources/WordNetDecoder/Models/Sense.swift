@@ -10,9 +10,9 @@ public struct Sense: Codable {
     
     public let id: ID
     public let synset: Synset.ID
-    public let senseRelations: ArrayOrObject<SenseRelation>?
-    public let examples: ArrayOrObject<Example>?
-    public let counts: ArrayOrObject<Count>?
+    public let senseRelations: OneOrMany<SenseRelation>?
+    public let examples: OneOrMany<Example>?
+    public let counts: OneOrMany<Count>?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"
