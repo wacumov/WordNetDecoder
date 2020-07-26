@@ -13,6 +13,7 @@ public struct Sense: Codable {
     public let senseRelations: OneOrMany<SenseRelation>?
     public let examples: OneOrMany<Example>?
     public let counts: OneOrMany<Count>?
+    public let confidenceScore: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"
@@ -20,5 +21,6 @@ public struct Sense: Codable {
         case senseRelations = "SenseRelation"
         case examples = "Example"
         case counts = "Count"
+        case confidenceScore = "@confidenceScore"
     }
 }

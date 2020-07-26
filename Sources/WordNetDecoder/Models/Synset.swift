@@ -15,6 +15,7 @@ public struct Synset: Codable {
     public let definitions: OneOrMany<Definition>?
     public let synsetRelations: OneOrMany<SynsetRelation>?
     public let examples: OneOrMany<Example>?
+    public let confidenceScore: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"
@@ -23,5 +24,6 @@ public struct Synset: Codable {
         case definitions = "Definition"
         case synsetRelations = "SynsetRelation"
         case examples = "Example"
+        case confidenceScore = "@confidenceScore"
     }
 }

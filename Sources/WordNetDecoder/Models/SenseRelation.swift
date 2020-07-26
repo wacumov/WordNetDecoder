@@ -7,10 +7,12 @@
 public struct SenseRelation: Codable {
     public let target: Sense.ID
     public let relType: RelationType
+    public let confidenceScore: String?
     
     enum CodingKeys: String, CodingKey {
         case target = "@target"
         case relType = "@relType"
+        case confidenceScore = "@confidenceScore"
     }
     
     public enum RelationType: String, Codable {
