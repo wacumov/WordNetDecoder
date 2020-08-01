@@ -8,11 +8,13 @@ public struct SynsetRelation: Codable {
     public let target: Synset.ID
     public let relType: RelationType
     public let confidenceScore: String?
+    public let status: String?
     
     enum CodingKeys: String, CodingKey {
         case target = "@target"
         case relType = "@relType"
         case confidenceScore = "@confidenceScore"
+        case status = "@status"
     }
     
     public enum RelationType: String, Codable {

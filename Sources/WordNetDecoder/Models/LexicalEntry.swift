@@ -11,6 +11,7 @@ public struct LexicalEntry: Codable {
     public let senses: OneOrMany<Sense>?
     public let syntacticBehaviours: OneOrMany<SyntacticBehaviour>?
     public let confidenceScore: String?
+    public let status: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "@id"
@@ -19,5 +20,6 @@ public struct LexicalEntry: Codable {
         case senses = "Sense"
         case syntacticBehaviours = "SyntacticBehaviour"
         case confidenceScore = "@confidenceScore"
+        case status = "@status"
     }
 }
