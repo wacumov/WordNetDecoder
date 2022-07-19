@@ -1,7 +1,7 @@
 # WordNetDecoder
 
 [![Status](https://github.com/wacumov/WordNetDecoder/workflows/Test/badge.svg?branch=master)](https://github.com/wacumov/WordNetDecoder/actions?query=workflow%3ATest+branch%3Amaster)
-![Swift 5.2](https://img.shields.io/badge/Swift-5.2-green.svg)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fwacumov%2FWordNetDecoder%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/wacumov/WordNetDecoder)
 [![Swift Package](https://img.shields.io/static/v1?label=Swift&message=Package&logo=Swift&color=fa7343&style=flat)](https://github.com/Apple/swift-package-manager)
 ![Mac & Linux](https://img.shields.io/badge/platforms-mac+linux-brightgreen.svg?style=flat)
 
